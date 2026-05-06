@@ -10,41 +10,35 @@ function ClassifySnake() {
   const [loading, setLoading] = useState(false);
 
   const snakeDetails = {
-    Cobra: {
+    cobra: {
       scientificName: "Naja naja",
       riskLevel: "High Risk",
       advice:
         "Keep distance immediately. Do not try to catch or touch the snake. Contact wildlife rescue or emergency medical help if bitten.",
     },
-    "Russell Viper": {
-      scientificName: "Daboia russelii",
+    hump_nosed_pit_viper: {
+      scientificName: "Hypnale hypnale",
       riskLevel: "High Risk",
       advice:
-        "Very dangerous venomous snake. Avoid movement near the snake and seek emergency medical support if bitten.",
+        "Venomous snake. Do not touch it. Seek medical help if bitten.",
     },
-    Krait: {
-      scientificName: "Bungarus caeruleus",
-      riskLevel: "High Risk",
-      advice:
-        "Highly venomous snake. Avoid handling and get urgent medical attention if bitten.",
-    },
-    Python: {
+    indian_rock_python: {
       scientificName: "Python molurus",
       riskLevel: "Low Risk",
       advice:
         "Usually non-venomous, but can still be dangerous due to size. Keep distance and call wildlife rescue.",
     },
-    "Hump Nosed Viper": {
-      scientificName: "Hypnale hypnale",
-      riskLevel: "Medium Risk",
+    krait: {
+      scientificName: "Bungarus caeruleus",
+      riskLevel: "High Risk",
       advice:
-        "Venomous snake. Do not touch it. Seek medical help if bitten.",
+        "Highly venomous snake. Avoid handling and get urgent medical attention if bitten.",
     },
-    "Green Pit Viper": {
-      scientificName: "Trimeresurus trigonocephalus",
-      riskLevel: "Medium Risk",
+    viper: {
+      scientificName: "Daboia russelii",
+      riskLevel: "High Risk",
       advice:
-        "Venomous snake. Keep distance and get medical advice if bitten.",
+        "Very dangerous venomous snake. Avoid movement near the snake and seek emergency medical support if bitten.",
     },
   };
 
@@ -77,7 +71,7 @@ function ClassifySnake() {
       };
 
       setResult({
-        snakeName: predictedSnake,
+        snakeName: predictedSnake.replaceAll("_", " "),
         scientificName: details.scientificName,
         riskLevel: details.riskLevel,
         confidence: `${confidence}%`,
