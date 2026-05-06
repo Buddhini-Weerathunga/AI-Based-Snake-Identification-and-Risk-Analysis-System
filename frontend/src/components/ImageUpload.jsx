@@ -1,7 +1,9 @@
-function ImageUpload({ image, setImage }) {
+function ImageUpload({ image, setImage, setSelectedFile }) {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
+
     if (file) {
+      setSelectedFile(file);
       setImage(URL.createObjectURL(file));
     }
   };
@@ -19,10 +21,6 @@ function ImageUpload({ image, setImage }) {
       borderRadius: "18px",
       padding: "40px",
       background: "#ecfdf5",
-      cursor: "pointer",
-    },
-    input: {
-      marginTop: "20px",
     },
     img: {
       marginTop: "20px",
@@ -38,12 +36,8 @@ function ImageUpload({ image, setImage }) {
       <div style={styles.box}>
         <h2>Upload Snake Image</h2>
         <p>Select a clear image of the snake</p>
-        <input
-          style={styles.input}
-          type="file"
-          accept="image/*"
-          onChange={handleImageChange}
-        />
+
+        <input type="file" accept="image/*" onChange={handleImageChange} />
       </div>
 
       {image && <img src={image} alt="Uploaded snake" style={styles.img} />}
