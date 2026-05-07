@@ -2,5 +2,55 @@
   "navbarTitle": "සර්ප වර්ගීකරණය",
   "navbarSubtitle": "සර්ප ඡායාරූපයක් උඩුගත කර වහාම අනාවැකි ප්‍රතිඵල ලබාගන්න.",
   "home": "මුල් පිටුව",
-  "about": "අප ගැන"
+  "about": "අප ගැන",
+
+  "classificationTitle": "සර්ප රූප වර්ගීකරණය",
+  "classifySnake": "සර්පය හඳුනාගන්න",
+  "classifying": "හඳුනාගනිමින්...",
+  "uploadAlert": "කරුණාකර පළමුව සර්ප ඡායාරූපයක් උඩුගත කරන්න",
+  "predictionFailed": "අනාවැකිය අසාර්ථක විය. Flask backend පරීක්ෂා කරන්න.",
+  "predictionEmpty": "අනාවැකි ප්‍රතිඵල මෙහි පෙන්වනු ඇත",
+
+  "classificationResult": "වර්ගීකරණ ප්‍රතිඵල",
+  "snakeName": "සර්ප නාමය",
+  "scientificName": "විද්‍යාත්මක නාමය",
+  "confidence": "විශ්වාස මට්ටම",
+  "safetyAdvice": "ආරක්ෂක උපදෙස්",
+
+  "snakes": {
+    "cobra": {
+      "name": "නාගයා",
+      "scientificName": "Naja naja",
+      "riskLevel": "ඉහළ අවදානම",
+      "advice": "වහාම දුරස්ව සිටින්න. සර්පයාට අත නොතබන්න. දෂ්ට කළහොත් වහාම වෛද්‍ය උපකාර ලබාගන්න."
+    },
+
+    "hump_nosed_pit_viper": {
+      "name": "කටුස්සා පොළඟා",
+      "scientificName": "Hypnale hypnale",
+      "riskLevel": "ඉහළ අවදානම",
+      "advice": "විෂ සහිත සර්පයෙකි. අල්ලන්න එපා. දෂ්ට කළහොත් වහාම වෛද්‍ය ප්‍රතිකාර ලබාගන්න."
+    },
+
+    "indian_rock_python": {
+      "name": "පිඹුරා",
+      "scientificName": "Python molurus",
+      "riskLevel": "අඩු අවදානම",
+      "advice": "විෂ රහිත නමුත් විශාල සර්පයෙකි. දුරස්ව සිට වනජීවී අංශයට දැනුම් දෙන්න."
+    },
+
+    "krait": {
+      "name": "වැලි පොළඟා",
+      "scientificName": "Bungarus caeruleus",
+      "riskLevel": "ඉහළ අවදානම",
+      "advice": "ඉතා විෂ සහිත සර්පයෙකි. දෂ්ට කළහොත් වහාම රෝහල් ගත වන්න."
+    },
+
+    "viper": {
+      "name": "පොළඟා",
+      "scientificName": "Daboia russelii",
+      "riskLevel": "ඉහළ අවදානම",
+      "advice": "විෂ සහිත භයානක සර්පයෙකි. දුරස්ව සිටින්න සහ වෛද්‍ය උපකාර ලබාගන්න."
+    }
+  }
 }

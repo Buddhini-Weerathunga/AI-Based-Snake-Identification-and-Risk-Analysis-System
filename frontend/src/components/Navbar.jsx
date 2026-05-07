@@ -1,10 +1,5 @@
 import { NavLink } from "react-router-dom";
-import {
-  Home,
-  Info,
-  Globe,
-  HelpCircle,
-} from "lucide-react";
+import { Home, Info, Globe, HelpCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 function Navbar() {
@@ -17,59 +12,55 @@ function Navbar() {
   const styles = {
     nav: {
       width: "100%",
+      margin: 0,
+      padding: "18px 40px",
+      background: "#ffffff",
+      borderBottom: "1px solid #e5e7eb",
+      boxShadow: "0 2px 10px rgba(0,0,0,0.05)",
       display: "flex",
       justifyContent: "space-between",
       alignItems: "center",
-      padding: "20px 40px",
-      background: "#ffffff",
-      boxShadow: "0 2px 10px rgba(0,0,0,0.06)",
-      borderBottom: "1px solid #e5e7eb",
-      fontFamily: "Arial, sans-serif",
       boxSizing: "border-box",
+      fontFamily: "Arial, sans-serif",
     },
 
     left: {
       display: "flex",
       alignItems: "center",
       gap: "18px",
+      flex: 1,
     },
 
     logoBox: {
-      width: "72px",
-      height: "72px",
+      width: "68px",
+      height: "68px",
       borderRadius: "50%",
       background: "#065f46",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      color: "white",
       fontSize: "34px",
-      fontWeight: "bold",
       flexShrink: 0,
     },
 
-    titleSection: {
-      display: "flex",
-      flexDirection: "column",
-    },
-
     title: {
-      fontSize: "28px",
-      fontWeight: "700",
+      fontSize: "30px",
+      fontWeight: "800",
       color: "#065f46",
       margin: 0,
     },
 
     subtitle: {
       fontSize: "15px",
-      color: "#6b7280",
+      color: "#64748b",
       marginTop: "6px",
     },
 
     center: {
       display: "flex",
       alignItems: "center",
-      gap: "18px",
+      gap: "16px",
+      marginRight: "30px",
     },
 
     menuItem: {
@@ -78,8 +69,8 @@ function Navbar() {
       gap: "8px",
       textDecoration: "none",
       color: "#111827",
-      fontWeight: "600",
-      padding: "14px 18px",
+      fontWeight: "700",
+      padding: "13px 18px",
       borderRadius: "14px",
     },
 
@@ -91,61 +82,44 @@ function Navbar() {
     right: {
       display: "flex",
       alignItems: "center",
-      gap: "18px",
+      gap: "16px",
     },
 
     languageWrapper: {
       display: "flex",
       alignItems: "center",
-      gap: "10px",
+      gap: "8px",
+      border: "1px solid #d1d5db",
+      padding: "10px 14px",
+      borderRadius: "14px",
     },
 
-    // Native select with a visible chevron via appearance + background trick
     selectBox: {
-      border: "1px solid #d1d5db",
-      padding: "12px 40px 12px 16px",
-      borderRadius: "14px",
-      fontSize: "15px",
+      border: "none",
       outline: "none",
+      background: "transparent",
+      fontSize: "15px",
       cursor: "pointer",
-      background: "#fff url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23374151' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E\") no-repeat right 12px center",
-      WebkitAppearance: "none",
-      MozAppearance: "none",
-      appearance: "none",
-      color: "#111827",
-      minWidth: "150px",
     },
 
     helpIcon: {
       color: "#065f46",
       cursor: "pointer",
     },
-
-    divider: {
-      width: "1px",
-      height: "60px",
-      background: "#e5e7eb",
-      marginLeft: "30px",
-      marginRight: "30px",
-    },
   };
 
   return (
     <nav style={styles.nav}>
-      {/* LEFT */}
       <div style={styles.left}>
         <div style={styles.logoBox}>🐍</div>
 
-        <div style={styles.titleSection}>
+        <div>
           <h1 style={styles.title}>{t("navbarTitle")}</h1>
-          <span style={styles.subtitle}>{t("navbarSubtitle")}</span>
+          <div style={styles.subtitle}>{t("navbarSubtitle")}</div>
         </div>
       </div>
 
-      {/* CENTER */}
       <div style={styles.center}>
-        <div style={styles.divider}></div>
-
         <NavLink
           to="/"
           style={({ isActive }) => ({
@@ -169,11 +143,9 @@ function Navbar() {
         </NavLink>
       </div>
 
-      {/* RIGHT */}
       <div style={styles.right}>
         <div style={styles.languageWrapper}>
           <Globe size={20} />
-
           <select
             onChange={changeLanguage}
             value={i18n.language}

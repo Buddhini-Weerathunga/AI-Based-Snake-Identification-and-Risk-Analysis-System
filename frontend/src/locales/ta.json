@@ -2,5 +2,55 @@
   "navbarTitle": "பாம்பு வகைப்பாடு",
   "navbarSubtitle": "பாம்பு படத்தை பதிவேற்றி உடனடி கணிப்பு பெறுங்கள்.",
   "home": "முகப்பு",
-  "about": "எங்களை பற்றி"
+  "about": "எங்களை பற்றி",
+
+  "classificationTitle": "பாம்பு பட வகைப்பாடு",
+  "classifySnake": "பாம்பை அடையாளம் காண்க",
+  "classifying": "அடையாளம் காணப்படுகிறது...",
+  "uploadAlert": "முதலில் பாம்பு படத்தை பதிவேற்றவும்",
+  "predictionFailed": "கணிப்பு தோல்வியடைந்தது. Flask backend ஐ சரிபார்க்கவும்.",
+  "predictionEmpty": "கணிப்பு முடிவு இங்கே காண்பிக்கப்படும்",
+
+  "classificationResult": "வகைப்பாடு முடிவு",
+  "snakeName": "பாம்பு பெயர்",
+  "scientificName": "அறிவியல் பெயர்",
+  "confidence": "நம்பகத்தன்மை",
+  "safetyAdvice": "பாதுகாப்பு ஆலோசனை",
+
+  "snakes": {
+    "cobra": {
+      "name": "நாகப்பாம்பு",
+      "scientificName": "Naja naja",
+      "riskLevel": "அதிக ஆபத்து",
+      "advice": "உடனே தூரம் விலகுங்கள். பாம்பை தொட வேண்டாம். கடித்தால் உடனடி மருத்துவ உதவி பெறுங்கள்."
+    },
+
+    "hump_nosed_pit_viper": {
+      "name": "ஹம்ப் நோஸ்ட் பிட் வைபர்",
+      "scientificName": "Hypnale hypnale",
+      "riskLevel": "அதிக ஆபத்து",
+      "advice": "விஷப்பாம்பு. தொடாதீர்கள். கடித்தால் உடனடியாக மருத்துவ உதவி பெறுங்கள்."
+    },
+
+    "indian_rock_python": {
+      "name": "இந்திய பைதான்",
+      "scientificName": "Python molurus",
+      "riskLevel": "குறைந்த ஆபத்து",
+      "advice": "விஷமில்லாத பாம்பு. ஆனால் தூரம் விலகி வனவிலங்கு அதிகாரிகளை தொடர்பு கொள்ளுங்கள்."
+    },
+
+    "krait": {
+      "name": "கிரைட்",
+      "scientificName": "Bungarus caeruleus",
+      "riskLevel": "அதிக ஆபத்து",
+      "advice": "மிகவும் விஷமுள்ள பாம்பு. கடித்தால் உடனடி மருத்துவ சிகிச்சை பெறுங்கள்."
+    },
+
+    "viper": {
+      "name": "வைபர்",
+      "scientificName": "Daboia russelii",
+      "riskLevel": "அதிக ஆபத்து",
+      "advice": "விஷமுள்ள ஆபத்தான பாம்பு. தூரம் விலகி உடனடியாக மருத்துவ உதவி பெறுங்கள்."
+    }
+  }
 }

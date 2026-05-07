@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ImageUpload from "../components/ImageUpload";
 import PredictionResult from "../components/PredictionResult";
 import api from "../services/api";
 
 function ClassifySnake() {
+  const { t } = useTranslation();
+
   const [image, setImage] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
   const [result, setResult] = useState(null);
@@ -11,7 +14,7 @@ function ClassifySnake() {
 
   const handleClassify = async () => {
     if (!selectedFile) {
-      alert("Please upload a snake image first");
+      alert(t("uploadAlert"));
       return;
     }
 
@@ -24,16 +27,15 @@ function ClassifySnake() {
 
       const response = await api.post("/predict", formData);
 
+      const snakeKey = response.data.snake;
+
       setResult({
-        snakeName: response.data.displayName,
-        scientificName: response.data.scientificName,
-        riskLevel: response.data.riskLevel,
+        snakeKey: snakeKey,
         confidence: `${response.data.confidence}%`,
-        advice: response.data.advice,
       });
     } catch (error) {
       console.error(error);
-      alert("Prediction failed. Check Flask backend.");
+      alert(t("predictionFailed"));
     } finally {
       setLoading(false);
     }
@@ -42,7 +44,7 @@ function ClassifySnake() {
   return (
     <div style={{ minHeight: "90vh", background: "#f8fafc", padding: "50px" }}>
       <h1 style={{ textAlign: "center", color: "#064e3b", fontSize: "36px" }}>
-        Snake Image Classification
+        {t("classificationTitle")}
       </h1>
 
       <div
@@ -77,7 +79,7 @@ function ClassifySnake() {
               fontWeight: "bold",
             }}
           >
-            {loading ? "Classifying..." : "Classify Snake"}
+            {loading ? t("classifying") : t("classifySnake")}
           </button>
         </div>
 

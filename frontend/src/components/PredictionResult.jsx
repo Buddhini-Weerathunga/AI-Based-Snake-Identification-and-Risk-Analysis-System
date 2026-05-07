@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import RiskCard from "./RiskCard";
 
 function PredictionResult({ result }) {
+  const { t } = useTranslation();
+
   const styles = {
     card: {
       background: "white",
@@ -34,31 +37,37 @@ function PredictionResult({ result }) {
   if (!result) {
     return (
       <div style={styles.card}>
-        <p style={styles.empty}>Prediction result will appear here</p>
+        <p style={styles.empty}>{t("predictionEmpty")}</p>
       </div>
     );
   }
 
+  const snakePath = `snakes.${result.snakeKey}`;
+
   return (
     <div style={styles.card}>
-      <h2 style={styles.title}>Classification Result</h2>
+      <h2 style={styles.title}>{t("classificationResult")}</h2>
 
       <p style={styles.row}>
-        <span style={styles.label}>Snake Name:</span> {result.snakeName}
+        <span style={styles.label}>{t("snakeName")}:</span>{" "}
+        {t(`${snakePath}.name`)}
       </p>
 
       <p style={styles.row}>
-        <span style={styles.label}>Scientific Name:</span> {result.scientificName}
+        <span style={styles.label}>{t("scientificName")}:</span>{" "}
+        {t(`${snakePath}.scientificName`)}
       </p>
 
       <p style={styles.row}>
-        <span style={styles.label}>Confidence:</span> {result.confidence}
+        <span style={styles.label}>{t("confidence")}:</span>{" "}
+        {result.confidence}
       </p>
 
-      <RiskCard riskLevel={result.riskLevel} />
+      <RiskCard riskLevel={t(`${snakePath}.riskLevel`)} />
 
       <p style={styles.row}>
-        <span style={styles.label}>Safety Advice:</span> {result.advice}
+        <span style={styles.label}>{t("safetyAdvice")}:</span>{" "}
+        {t(`${snakePath}.advice`)}
       </p>
     </div>
   );

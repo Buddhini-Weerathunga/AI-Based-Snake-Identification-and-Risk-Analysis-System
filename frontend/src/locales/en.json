@@ -2,5 +2,55 @@
   "navbarTitle": "Snake Classification",
   "navbarSubtitle": "Upload an image of a snake and get instant prediction with confidence score.",
   "home": "Home",
-  "about": "About"
+  "about": "About",
+
+  "classificationTitle": "Snake Image Classification",
+  "classifySnake": "Classify Snake",
+  "classifying": "Classifying...",
+  "uploadAlert": "Please upload a snake image first",
+  "predictionFailed": "Prediction failed. Check Flask backend.",
+  "predictionEmpty": "Prediction result will appear here",
+
+  "classificationResult": "Classification Result",
+  "snakeName": "Snake Name",
+  "scientificName": "Scientific Name",
+  "confidence": "Confidence",
+  "safetyAdvice": "Safety Advice",
+
+  "snakes": {
+    "cobra": {
+      "name": "Cobra",
+      "scientificName": "Naja naja",
+      "riskLevel": "High Risk",
+      "advice": "Keep distance immediately. Do not touch the snake. Seek urgent medical help if bitten."
+    },
+
+    "hump_nosed_pit_viper": {
+      "name": "Hump Nosed Pit Viper",
+      "scientificName": "Hypnale hypnale",
+      "riskLevel": "High Risk",
+      "advice": "Venomous snake. Avoid handling and get medical support immediately if bitten."
+    },
+
+    "indian_rock_python": {
+      "name": "Indian Rock Python",
+      "scientificName": "Python molurus",
+      "riskLevel": "Low Risk",
+      "advice": "Non-venomous, but keep distance and contact wildlife rescue."
+    },
+
+    "krait": {
+      "name": "Krait",
+      "scientificName": "Bungarus caeruleus",
+      "riskLevel": "High Risk",
+      "advice": "Highly venomous snake. Get emergency medical attention if bitten."
+    },
+
+    "viper": {
+      "name": "Viper",
+      "scientificName": "Daboia russelii",
+      "riskLevel": "High Risk",
+      "advice": "Venomous snake. Stay away and seek medical help if bitten."
+    }
+  }
 }
