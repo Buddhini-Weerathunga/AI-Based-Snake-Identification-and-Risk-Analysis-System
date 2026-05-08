@@ -11,6 +11,10 @@ function Navbar() {
 
   const styles = {
     nav: {
+      position: "fixed",
+      top: 0,
+      left: 0,
+      right: 0,
       width: "100%",
       margin: 0,
       padding: "18px 40px",
@@ -22,6 +26,7 @@ function Navbar() {
       alignItems: "center",
       boxSizing: "border-box",
       fontFamily: "Arial, sans-serif",
+      zIndex: 1000,
     },
 
     left: {

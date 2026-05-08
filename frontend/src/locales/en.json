@@ -10,47 +10,166 @@
   "uploadAlert": "Please upload a snake image first",
   "predictionFailed": "Prediction failed. Check Flask backend.",
   "predictionEmpty": "Prediction result will appear here",
+  "uploadSubtitle": "Upload a clear snake image for instant AI identification",
+  "dropzoneTitle": "Drop your image here",
+  "dropzoneSubtitle": "or click to browse — JPG, PNG supported",
+  "browseFile": "Browse File",
+  "changeImage": "Change Image",
+  "disclaimer": "AI-based identification. Always consult a wildlife expert for confirmation.",
 
   "classificationResult": "Classification Result",
+  "resultPageTitle": "Snake Classification Result",
+  "analysisSuccess": "Analysis completed successfully",
+  "backToHome": "Back to Home",
+  "newSearch": "New Search",
+  "uploadedImage": "Uploaded Image",
+  "identificationDetails": "Identification Details",
+  "firstAidTitle": "First Aid Guidance",
+  "biteRiskTitle": "Bite Risk Warning",
+  "note": "Note",
+  "fullDisclaimer": "This identification is based on AI image analysis and may not be 100% accurate. When in doubt, always consult a wildlife expert or medical professional.",
+
   "snakeName": "Snake Name",
   "scientificName": "Scientific Name",
-  "confidence": "Confidence",
+  "confidence": "Identification Confidence",
+  "venomLevel": "Venom Level",
+  "riskLevel": "Risk Level",
+  "habitat": "Habitat",
+  "behavior": "Behavior",
+  "activeTime": "Active Time",
   "safetyAdvice": "Safety Advice",
+  "tabDetails": "Snake Details",
+  "tabSafety": "Safety Advice",
 
   "snakes": {
     "cobra": {
       "name": "Cobra",
       "scientificName": "Naja naja",
+      "venomLevel": "Highly Venomous",
+      "venomNote": "Neurotoxic venom",
       "riskLevel": "High Risk",
-      "advice": "Keep distance immediately. Do not touch the snake. Seek urgent medical help if bitten."
+      "riskNote": "Immediate danger",
+      "habitat": "Forests, Grasslands, Near water",
+      "behavior": "Aggressive when threatened",
+      "activeTime": "Diurnal & Nocturnal",
+      "advice": "Keep distance immediately. Do not touch the snake. Seek urgent medical help if bitten.",
+      "firstAidNote": "This is a highly venomous snake. Immediate medical treatment is critical.",
+      "firstAid": [
+        { "title": "Stay Calm & Reassure", "desc": "Keep the victim calm and still to slow down any stress response." },
+        { "title": "Immobilize the Area", "desc": "Keep the bitten limb still and below heart level." },
+        { "title": "Remove Tight Items", "desc": "Remove rings, watches, or tight clothing near the bite." },
+        { "title": "Seek Emergency Help", "desc": "Call emergency services or rush to the nearest hospital immediately." }
+      ],
+      "biteRisk": [
+        { "icon": "🚫", "text": "Cobra venom is highly neurotoxic and can cause paralysis." },
+        { "icon": "⚠️", "text": "Symptoms include swelling, difficulty breathing, and blurred vision." },
+        { "icon": "🚨", "text": "Do not attempt to handle or capture this snake. Seek emergency help immediately.", "highlight": true },
+        { "icon": "🏥", "text": "Anti-venom is available — get to a hospital as fast as possible." }
+      ]
     },
 
     "hump_nosed_pit_viper": {
       "name": "Hump Nosed Pit Viper",
       "scientificName": "Hypnale hypnale",
+      "venomLevel": "Venomous",
+      "venomNote": "Hemotoxic venom",
       "riskLevel": "High Risk",
-      "advice": "Venomous snake. Avoid handling and get medical support immediately if bitten."
+      "riskNote": "Seek medical help",
+      "habitat": "Forests, Plantations, Rocky areas",
+      "behavior": "Aggressive, Strikes quickly",
+      "activeTime": "Nocturnal",
+      "advice": "Venomous snake. Avoid handling and get medical support immediately if bitten.",
+      "firstAidNote": "Hemotoxic venom can cause tissue damage. Medical treatment is essential.",
+      "firstAid": [
+        { "title": "Stay Calm & Reassure", "desc": "Keep the victim calm and still to slow down any stress response." },
+        { "title": "Clean the Wound", "desc": "Gently wash the bite area with soap and clean water." },
+        { "title": "Monitor Symptoms", "desc": "Watch for pain, swelling, or other unusual symptoms." },
+        { "title": "Seek Medical Help", "desc": "Get medical attention immediately even if symptoms seem mild." }
+      ],
+      "biteRisk": [
+        { "icon": "🚫", "text": "Hump-nosed pit viper venom causes local tissue destruction." },
+        { "icon": "⚠️", "text": "Symptoms include severe pain, swelling, and bleeding disorders." },
+        { "icon": "🚨", "text": "Do not attempt to handle or capture this snake. Maintain a safe distance.", "highlight": true },
+        { "icon": "🏥", "text": "Seek medical attention promptly even if the bite seems minor." }
+      ]
     },
 
     "indian_rock_python": {
       "name": "Indian Rock Python",
       "scientificName": "Python molurus",
+      "venomLevel": "Non-Venomous",
+      "venomNote": "Constrictor (Harmless to humans)",
       "riskLevel": "Low Risk",
-      "advice": "Non-venomous, but keep distance and contact wildlife rescue."
+      "riskNote": "Generally safe, but avoid handling",
+      "habitat": "Forests, Grasslands, Near water bodies",
+      "behavior": "Non-aggressive, Flee when threatened",
+      "activeTime": "Nocturnal",
+      "advice": "Non-venomous, but keep distance and contact wildlife rescue.",
+      "firstAidNote": "This snake is non-venomous. Serious medical treatment is usually not required.",
+      "firstAid": [
+        { "title": "Stay Calm & Reassure", "desc": "Keep the victim calm and still to slow down any stress response." },
+        { "title": "Clean the Wound", "desc": "Gently wash the bite area with soap and clean water." },
+        { "title": "Monitor Symptoms", "desc": "Watch for pain, swelling, or other unusual symptoms." },
+        { "title": "Seek Medical Help if Needed", "desc": "Get medical attention if symptoms worsen or persist." }
+      ],
+      "biteRisk": [
+        { "icon": "🚫", "text": "Indian Rock Python is non-venomous and poses no danger to humans." },
+        { "icon": "⚠️", "text": "However, it may bite if provoked or handled roughly." },
+        { "icon": "✋", "text": "Do not attempt to handle or capture this snake. Maintain a safe distance and let it move away.", "highlight": true },
+        { "icon": "🩹", "text": "If bitten, clean the wound and consult a doctor if you experience any discomfort." }
+      ]
     },
 
     "krait": {
       "name": "Krait",
       "scientificName": "Bungarus caeruleus",
+      "venomLevel": "Highly Venomous",
+      "venomNote": "Neurotoxic venom",
       "riskLevel": "High Risk",
-      "advice": "Highly venomous snake. Get emergency medical attention if bitten."
+      "riskNote": "Life-threatening",
+      "habitat": "Forests, Agricultural fields, Near water",
+      "behavior": "Docile by day, Aggressive at night",
+      "activeTime": "Nocturnal",
+      "advice": "Highly venomous snake. Get emergency medical attention if bitten.",
+      "firstAidNote": "Krait bites are often painless but extremely dangerous. Seek help immediately.",
+      "firstAid": [
+        { "title": "Stay Calm & Reassure", "desc": "Keep the victim calm and still to slow down any stress response." },
+        { "title": "Immobilize the Area", "desc": "Keep the bitten limb still and below heart level." },
+        { "title": "Do Not Cut or Suck", "desc": "Never cut the wound or attempt to suck out venom." },
+        { "title": "Seek Emergency Help", "desc": "Call emergency services or rush to the nearest hospital immediately." }
+      ],
+      "biteRisk": [
+        { "icon": "🚫", "text": "Krait venom is highly neurotoxic — bites are often painless but deadly." },
+        { "icon": "⚠️", "text": "Symptoms include muscle paralysis, difficulty breathing, and drooping eyelids." },
+        { "icon": "🚨", "text": "Do not attempt to handle or capture this snake. Seek emergency help immediately.", "highlight": true },
+        { "icon": "🏥", "text": "Anti-venom is available — time is critical, get to a hospital immediately." }
+      ]
     },
 
     "viper": {
       "name": "Viper",
       "scientificName": "Daboia russelii",
+      "venomLevel": "Highly Venomous",
+      "venomNote": "Hemotoxic venom",
       "riskLevel": "High Risk",
-      "advice": "Venomous snake. Stay away and seek medical help if bitten."
+      "riskNote": "Immediate danger",
+      "habitat": "Grasslands, Scrublands, Open forests",
+      "behavior": "Aggressive, Loud hissing warning",
+      "activeTime": "Nocturnal",
+      "advice": "Venomous snake. Stay away and seek medical help if bitten.",
+      "firstAidNote": "Russell's Viper is one of the most dangerous snakes. Immediate treatment is critical.",
+      "firstAid": [
+        { "title": "Stay Calm & Reassure", "desc": "Keep the victim calm and still to slow down any stress response." },
+        { "title": "Immobilize the Area", "desc": "Keep the bitten limb still and below heart level." },
+        { "title": "Remove Tight Items", "desc": "Remove rings, watches, or tight clothing near the bite." },
+        { "title": "Seek Emergency Help", "desc": "Call emergency services or rush to the nearest hospital immediately." }
+      ],
+      "biteRisk": [
+        { "icon": "🚫", "text": "Russell's Viper venom causes severe internal bleeding and organ failure." },
+        { "icon": "⚠️", "text": "Symptoms include intense pain, swelling, bleeding gums, and kidney failure." },
+        { "icon": "🚨", "text": "Do not attempt to handle or capture this snake. Seek emergency help immediately.", "highlight": true },
+        { "icon": "🏥", "text": "Anti-venom is available — get to a hospital as fast as possible." }
+      ]
     }
   }
 }

@@ -11,23 +11,23 @@ function ImageUpload({ image, setImage, setSelectedFile }) {
   const styles = {
     card: {
       background: "white",
-      padding: "30px",
+      padding: "20px",
       borderRadius: "20px",
       boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
       textAlign: "center",
     },
     box: {
       border: "2px dashed #10b981",
-      borderRadius: "18px",
-      padding: "40px",
+      borderRadius: "14px",
+      padding: "20px",
       background: "#ecfdf5",
     },
     img: {
-      marginTop: "20px",
+      marginTop: "14px",
       width: "100%",
-      maxHeight: "300px",
+      maxHeight: "200px",
       objectFit: "cover",
-      borderRadius: "16px",
+      borderRadius: "12px",
     },
   };
 
