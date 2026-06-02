@@ -1,6 +1,6 @@
 
 
-# 🐍 AI-Based Snake Identification and Risk Assessment System
+# 🐍 AI-Based Snake Identification and Risk Analysis System
 
 ## 📌 Overview
 
